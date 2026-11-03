@@ -1,35 +1,16 @@
-@import './base.css';
+/* ============================================
+   全局样式
+   在 main.js 里 import 之后，对所有组件生效
+   （不带 scoped，所以能作用于 body 这类组件外元素）
+   ============================================ */
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
+body {
+  margin: 0;          /* 去掉浏览器默认的 8px 外边距，页面才会真正贴边 */
+  color: #ffffff;     /* 全局文字颜色：普通元素（h1、div 等）会自动继承这个值 */
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+  --el-text-color-primary: rgba(255, 255, 255, 0.95);      /* 主要文字：标题、重点内容 */
+  --el-text-color-regular: rgba(255, 255, 255, 0.85);      /* 常规文字：表格内容、正文 */
+  --el-text-color-secondary: rgba(255, 255, 255, 0.65);    /* 次要文字：表头、说明文字 */
+  --el-text-color-placeholder: rgba(255, 255, 255, 0.45);  /* 占位符：输入框提示文字 */
+  --el-text-color-disabled: rgba(255, 255, 255, 0.3);      /* 禁用态文字 */
 }
